@@ -50,6 +50,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 - [ ] Add more browsers aliases
 - [ ] Add more test cases
+- [ ] AMD implementation
 
 ## Release History
 
