@@ -67,4 +67,11 @@ exports[ "prefiks" ] = {
     test.deepEqual( prefiks( "transforms2d", "ie", 10 ), [], "Should be []." );
     test.done();
   },
+  "semver versions given": function( test ) {
+    test.deepEqual( prefiks( "transforms2d", "ie", "<9" ), [], "Should be []." );
+    test.deepEqual( prefiks( "transforms2d", "ie", ">9" ), [], "Should be []." );
+    test.deepEqual( prefiks( "transforms2d", "ie", ">8" ), [ "ms" ], "Should be [ 'ms' ]." );
+    test.deepEqual( prefiks( "transforms2d", "ie", ">=9" ), [ "ms" ], "Should be [ 'ms' ]." );
+    test.done();
+  },
 };

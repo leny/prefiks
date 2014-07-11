@@ -23,13 +23,13 @@ _getBrowser = ( sBrowserName ) ->
         when "safari" then "safari"
         when "opera" then "opera"
         when "ios_saf", "ios" then "ios_saf"
-        when "op_mini" then "op_mini"
+        when "op_mini", "opera-mini", "opera_mini", "operamini" then "op_mini"
         when "android" then "android"
-        when "op_mob" then "op_mob"
-        when "bb" then "bb"
-        when "and_chr" then "and_chr"
-        when "and_ff" then "and_ff"
-        when "ie_mob" then "ie_mob"
+        when "op_mob", "opera-mobile", "operamobile", "opera_mobile" then "op_mob"
+        when "bb", "blackberry" then "bb"
+        when "and_chr", "android-chrome", "android_chrome", "androidchrome" then "and_chr"
+        when "and_ff", "android-firefox", "android_firefox", "androidfirefox" then "and_ff"
+        when "ie_mob", "ie-mobile", "ie_mobile", "iemobile" then "ie_mob"
         else null
     if sAgent
         oAgent = oAgents[ sAgent ]
