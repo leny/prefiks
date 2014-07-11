@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var prefiks = require('../lib/prefiks.js');
+var prefiks = require( "../lib/prefiks.js" );
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -22,15 +22,14 @@ var prefiks = require('../lib/prefiks.js');
     test.ifError(value)
 */
 
-exports['awesome'] = {
-  setUp: function(done) {
-    // setup here
+exports[ "awesome" ] = {
+  setUp: function( done ) {
     done();
   },
-  'no args': function(test) {
-    test.expect(1);
-    // tests here
-    test.equal(prefiks.awesome(), 'awesome', 'should be awesome.');
+  "errors": function( test ) {
+    test.throws( function() { prefiks( "css-filters", "nothing", 2 ) }, Error, "should throws for unknown browsers" );
+    test.throws( function() { prefiks( "nothing", "ie", 2 ) }, Error, "should throws for unknown features" );
+
     test.done();
   },
 };
