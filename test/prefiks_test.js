@@ -22,14 +22,29 @@ var prefiks = require( "../lib/prefiks.js" );
     test.ifError(value)
 */
 
-exports[ "awesome" ] = {
+exports[ "prefiks" ] = {
   setUp: function( done ) {
     done();
   },
   "errors": function( test ) {
     test.throws( function() { prefiks( "css-filters", "nothing", 2 ) }, Error, "should throws for unknown browsers" );
     test.throws( function() { prefiks( "nothing", "ie", 2 ) }, Error, "should throws for unknown features" );
-
+    test.done();
+  },
+  "no version given": function( test ) {
+    test.deepEqual( prefiks( "transforms2d", "ie" ), [ "ms" ], "should be [ 'ms' ]." );
+    test.deepEqual( prefiks( "transforms2d", "firefox" ), [ "moz" ], "should be [ 'moz' ]." );
+    test.deepEqual( prefiks( "transforms2d", "chrome" ), [ "webkit" ], "should be [ 'webkit' ]." );
+    test.deepEqual( prefiks( "transforms2d", "safari" ), [ "webkit" ], "should be [ 'webkit' ]." );
+    test.deepEqual( prefiks( "transforms2d", "opera" ), [ "o", "webkit" ], "should be [ 'o', 'webkit' ]." );
+    test.deepEqual( prefiks( "transforms2d", "ios_saf" ), [ "webkit" ], "should be [ 'webkit' ]." );
+    test.deepEqual( prefiks( "transforms2d", "op_mini" ), [], "should be []." );
+    test.deepEqual( prefiks( "transforms2d", "android" ), [ "webkit" ], "should be [ 'webkit' ]." );
+    test.deepEqual( prefiks( "transforms2d", "bb" ), [ "webkit" ], "should be [ 'webkit' ]." );
+    test.deepEqual( prefiks( "transforms2d", "op_mob" ), [ "webkit" ], "should be [ 'webkit' ]." );
+    test.deepEqual( prefiks( "transforms2d", "and_chr" ), [ "webkit" ], "should be [ 'webkit' ]." );
+    test.deepEqual( prefiks( "transforms2d", "and_ff" ), [], "should be []." );
+    test.deepEqual( prefiks( "transforms2d", "ie_mob" ), [], "should be []." );
     test.done();
   },
 };
