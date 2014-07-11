@@ -44,6 +44,8 @@
     "grunt-contrib-watch": "~0.5.3"
   },
   "dependencies": {
-    "caniuse-db": "^1.0.20140702"
+    "caniuse-db": "^1.0.20140702",
+    "lodash": "^2.4.1",
+    "semver": "^2.3.1"
   }
 }
