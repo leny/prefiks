@@ -46,19 +46,19 @@ exports[ "prefiks" ] = {
     test.done();
   },
   "no version given": function( test ) {
-    test.deepEqual( prefiks( "transforms2d", "ie" ), [ "ms" ], "Should be [ 'ms' ]." );
-    test.deepEqual( prefiks( "transforms2d", "firefox" ), [ "moz" ], "Should be [ 'moz' ]." );
-    test.deepEqual( prefiks( "transforms2d", "chrome" ), [ "webkit" ], "Should be [ 'webkit' ]." );
-    test.deepEqual( prefiks( "transforms2d", "safari" ), [ "webkit" ], "Should be [ 'webkit' ]." );
-    test.deepEqual( prefiks( "transforms2d", "opera" ), [ "o", "webkit" ], "Should be [ 'o', 'webkit' ]." );
-    test.deepEqual( prefiks( "transforms2d", "ios_saf" ), [ "webkit" ], "Should be [ 'webkit' ]." );
-    test.deepEqual( prefiks( "transforms2d", "op_mini" ), [], "Should be []." );
-    test.deepEqual( prefiks( "transforms2d", "android" ), [ "webkit" ], "Should be [ 'webkit' ]." );
-    test.deepEqual( prefiks( "transforms2d", "bb" ), [ "webkit" ], "Should be [ 'webkit' ]." );
-    test.deepEqual( prefiks( "transforms2d", "op_mob" ), [ "webkit" ], "Should be [ 'webkit' ]." );
-    test.deepEqual( prefiks( "transforms2d", "and_chr" ), [ "webkit" ], "Should be [ 'webkit' ]." );
-    test.deepEqual( prefiks( "transforms2d", "and_ff" ), [], "Should be []." );
-    test.deepEqual( prefiks( "transforms2d", "ie_mob" ), [], "Should be []." );
+    test.deepEqual( prefiks( "transforms2d", "ie" ), [ "ms" ], "Should be [ 'ms' ] for ie." );
+    test.deepEqual( prefiks( "transforms2d", "firefox" ), [ "moz" ], "Should be [ 'moz' ] for firefox." );
+    test.deepEqual( prefiks( "transforms2d", "chrome" ), [ "webkit" ], "Should be [ 'webkit' ] for chrome." );
+    test.deepEqual( prefiks( "transforms2d", "safari" ), [ "webkit" ], "Should be [ 'webkit' ] for safari." );
+    test.deepEqual( prefiks( "transforms2d", "opera" ), [ "o", "webkit" ], "Should be [ 'o', 'webkit' ] for opera." );
+    test.deepEqual( prefiks( "transforms2d", "ios_saf" ), [ "webkit" ], "Should be [ 'webkit' ] for ios_saf." );
+    test.deepEqual( prefiks( "transforms2d", "op_mini" ), [], "Should be [] for op_mini." );
+    test.deepEqual( prefiks( "transforms2d", "android" ), [ "webkit" ], "Should be [ 'webkit' ] for android." );
+    test.deepEqual( prefiks( "transforms2d", "bb" ), [ "webkit" ], "Should be [ 'webkit' ] for bb." );
+    test.deepEqual( prefiks( "transforms2d", "op_mob" ), [ "webkit", "o" ], "Should be [ 'webkit', 'o' ] for op_mob." );
+    test.deepEqual( prefiks( "transforms2d", "and_chr" ), [ "webkit" ], "Should be [ 'webkit' ] for and_chr." );
+    test.deepEqual( prefiks( "transforms2d", "and_ff" ), [], "Should be [] for and_ff." );
+    test.deepEqual( prefiks( "transforms2d", "ie_mob" ), [], "Should be [] for ie_mob." );
     test.done();
   },
 };
