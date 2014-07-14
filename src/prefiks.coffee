@@ -14,6 +14,8 @@ lodash = require "lodash"
 
 oAgents = oCaniuseData.agents
 
+fPrefixSort = ( sPrefix ) -> sPrefix.length
+
 _getBrowser = ( sBrowserName ) ->
     # TODO add many more aliases
     sAgent = switch sBrowserName.toLowerCase()
@@ -71,4 +73,4 @@ module.exports = ( sFeature, mBrowsers, mGivenVersion = "*" ) ->
                             aPrefixes.push sExceptionPrefix
                     aPrefixes.push oBrowser.prefix if bUseDefaulfPrefix or sGivenVersionRange is "*"
 
-    lodash.unique aPrefixes
+    lodash.sortBy( lodash.unique( aPrefixes ), fPrefixSort ).reverse()
