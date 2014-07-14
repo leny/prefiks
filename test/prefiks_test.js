@@ -27,7 +27,14 @@ exports[ "prefiks" ] = {
     done();
   },
   "errors": function( test ) {
+    var oBrowserHashOne = {
+      "nothing": 9,
+      "chrome": "<=35",
+      "firefox": ">28",
+      "opera": "*"
+    };
     test.throws( function() { prefiks( "css-filters", "nothing", 2 ) }, Error, "Should throws for unknown browsers" );
+    test.throws( function() { prefiks( "css-filters", oBrowserHashOne, 2 ) }, Error, "Should throws for unknown browsers" );
     test.throws( function() { prefiks( "nothing", "ie", 2 ) }, Error, "Should throws for unknown features" );
     test.done();
   },
@@ -72,6 +79,16 @@ exports[ "prefiks" ] = {
     test.deepEqual( prefiks( "transforms2d", "ie", ">9" ), [], "Should be []." );
     test.deepEqual( prefiks( "transforms2d", "ie", ">8" ), [ "ms" ], "Should be [ 'ms' ]." );
     test.deepEqual( prefiks( "transforms2d", "ie", ">=9" ), [ "ms" ], "Should be [ 'ms' ]." );
+    test.done();
+  },
+  "multiple browsers hash given": function( test ) {
+    var oBrowserHashOne = {
+      "Internet Explorer": 9,
+      "chrome": "<=35",
+      "firefox": ">28",
+      "opera": "*"
+    };
+    test.deepEqual( prefiks( "transforms2d", oBrowserHashOne ), [ "ms", "webkit", "o" ], "Should be [ 'ms', 'webkit', 'o' ]." );
     test.done();
   },
 };
