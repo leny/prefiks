@@ -57,7 +57,7 @@ exports[ "prefiks" ] = {
     test.deepEqual( prefiks( "transforms2d", "firefox" ), [ "moz" ], "Should be [ 'moz' ]." );
     test.deepEqual( prefiks( "transforms2d", "chrome" ), [ "webkit" ], "Should be [ 'webkit' ]." );
     test.deepEqual( prefiks( "transforms2d", "safari" ), [ "webkit" ], "Should be [ 'webkit' ]." );
-    test.deepEqual( prefiks( "transforms2d", "opera" ), [ "o", "webkit" ], "Should be [ 'o', 'webkit' ]." );
+    test.deepEqual( prefiks( "transforms2d", "opera" ), [ "webkit", "o" ], "Should be [ 'webkit', 'o' ]." );
     test.deepEqual( prefiks( "transforms2d", "ios_saf" ), [ "webkit" ], "Should be [ 'webkit' ]." );
     test.deepEqual( prefiks( "transforms2d", "op_mini" ), [], "Should be []." );
     test.deepEqual( prefiks( "transforms2d", "android" ), [ "webkit" ], "Should be [ 'webkit' ]." );
@@ -88,7 +88,7 @@ exports[ "prefiks" ] = {
       "firefox": ">28",
       "opera": "*"
     };
-    test.deepEqual( prefiks( "transforms2d", oBrowserHashOne ), [ "ms", "webkit", "o" ], "Should be [ 'ms', 'webkit', 'o' ]." );
+    test.deepEqual( prefiks( "transforms2d", oBrowserHashOne ), [ "webkit", "ms", "o" ], "Should be [ 'webkit', 'ms', 'o' ]." );
     test.done();
   },
 };
