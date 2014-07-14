@@ -16,7 +16,8 @@ Include it in your scripts with: `prefiks = require( "prefiks" );`
 
 The **prefiks** module exposes a function that can be called by two different forms.
 
-The `prefix` functions returns an array with the prefixes to use for the given browser(s) versions (it always returns an array, even empty).
+The `prefix` functions returns an array with the prefixes to use for the given browser(s) versions (it always returns an array, even empty).  
+The prefixes are reverse-ordered by length (longest prefix first).
 
 ### One browser form
 
