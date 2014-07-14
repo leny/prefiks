@@ -1,6 +1,6 @@
 {
   "name": "prefiks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Get the vendors prefixes of a css properties, according to can i use datas.",
   "keywords": [
     "caniuse",
