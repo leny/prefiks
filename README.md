@@ -14,15 +14,31 @@ Include it in your scripts with: `prefiks = require( "prefiks" );`
 
 ## Documentation
 
-The **prefiks** module exposes a function : 
+The **prefiks** module exposes a function that can be called by two different forms.
 
-    prefiks( feature, browser, version_range )
+The `prefix` functions returns an array with the prefixes to use for the given browser(s) versions (it always returns an array, even empty).
+
+### One browser form
+
+    prefiks( feature, browser [, version_range = "*" ] )
     
 * `feature` is the name of the feature on [caniuse website](http://caniuse.com) (look at the *feat* hash value in the URL).
 * `browser` is the name of the browser to examine.
 * `version_range` is a [semver version range](https://github.com/isaacs/node-semver#ranges) to examine.
 
-The `prefix` functions returns an array with the prefixes to use for the given browser's versions (it always returns an array, even empty).
+### Multiple browsers form
+
+    prefiks( feature, browsers )
+    
+* `feature` is the name of the feature on [caniuse website](http://caniuse.com) (look at the *feat* hash value in the URL).
+* `browsers` is an object of browsers/version to examine, like :
+
+    {
+        "Internet Explorer": 9,
+        "chrome": "<=30",
+        "firefox": ">28",
+        "opera": "*"
+    }
 
 ### `browser`'s aliases
 
