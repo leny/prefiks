@@ -50,11 +50,11 @@ The supported values for `browser` argument are listed bellow. These are **case 
 * `chrome`
 * `safari`
 * `opera`
-* `ios_saf`, `ios`
+* `ios_saf`, `ios`, `ios-safari`
 * `op_mini`, `opera-mini`, `opera_mini`, `operamini`
-* `android`
+* `android`, `android-browser`
 * `op_mob`, `opera-mobile`, `operamobile`, `opera_mobile`
-* `bb`, `blackberry`
+* `bb`, `blackberry`, `blackberry-browser`
 * `and_chr`, `android-chrome`, `android_chrome`, `androidchrome`
 * `and_ff`, `android-firefox`, `android_firefox`, `androidfirefox`
 * `ie_mob`, `ie-mobile`, `ie_mobile`, `iemobile`
