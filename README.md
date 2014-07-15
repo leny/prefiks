@@ -34,12 +34,14 @@ The prefixes are reverse-ordered by length (longest prefix first).
 * `feature` is the name of the feature on [caniuse website](http://caniuse.com) (look at the *feat* hash value in the URL).
 * `browsers` is an object of browsers/version to examine, like :
 
+```javascript
     {
         "Internet Explorer": 9,
         "chrome": "<=30",
         "firefox": ">28",
         "opera": "*"
     }
+```
 
 ### `browser`'s aliases
 
