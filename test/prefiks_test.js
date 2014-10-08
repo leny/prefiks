@@ -43,7 +43,7 @@ exports[ "prefiks" ] = {
     test.deepEqual( prefiks( "transforms2d", "android" ), [ "webkit" ], "Should be [ 'webkit' ]." );
     test.deepEqual( prefiks( "transforms2d", "bb" ), [ "webkit" ], "Should be [ 'webkit' ]." );
     test.deepEqual( prefiks( "transforms2d", "op_mob" ), [ "webkit", "o" ], "Should be [ 'webkit', 'o' ]." );
-    test.deepEqual( prefiks( "transforms2d", "and_chr" ), [ "webkit" ], "Should be [ 'webkit' ]." );
+    test.deepEqual( prefiks( "transforms2d", "and_chr" ), [], "Should be []." );
     test.deepEqual( prefiks( "transforms2d", "and_ff" ), [], "Should be []." );
     test.deepEqual( prefiks( "transforms2d", "ie_mob" ), [], "Should be []." );
     test.done();
