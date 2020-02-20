@@ -29,7 +29,9 @@
   ],
   "main": "lib/csj/prefiks.js",
   "module": "lib/esm/prefiks.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "engines": {
     "node": ">= 0.10"
   },
@@ -55,7 +57,7 @@
   },
   "dependencies": {
     "caniuse-db": "^1.0",
-    "lodash": "^2.4.1",
+    "lodash": "^4.17.15",
     "semver": "^4.0.3"
   }
 }
